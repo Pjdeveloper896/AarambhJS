@@ -1,0 +1,31 @@
+{
+  "name": "snapui",
+  "version": "1.0.0",
+  "description": "A lightweight reactive UI library with a virtual DOM and hooks (no JSX, no build tools).",
+  "main": "dist/Index.js",
+  "type": "module",
+  "exports": {
+    ".": "./dist/Index.js"
+  },
+  "keywords": [
+    "snapui",
+    "reactive",
+    "hooks",
+    "virtual-dom",
+    "ui-library",
+    "javascript",
+    "frontend",
+    "minimal",
+    "spa"
+  ],
+  "author": "pjdeveloper896",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pjdeveloper896/SnapUi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pjdeveloper896/SnapUi/issues"
+  },
+  "homepage": "https://github.com/pjdeveloper896/SnapUi#readme"
+}
