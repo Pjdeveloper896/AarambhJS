@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Test Your Framework</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; }
+    nav a { margin-right: 1rem; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a onclick="router.navigate('/')">Home</a>
+    <a onclick="router.navigate('/about')">About</a>
+  </nav>
+  <div id="app"></div>
+
+  <script src="./Index.js"></script>
+  <script>
+    const { createElement, createRouter } = SnapUI;
+
+    const routes = {
+      '/': () => createElement('div', null,
+        createElement('h1', null, 'Home Page'),
+        createElement('p', null, 'Test Virtual DOM Works!')
+      ),
+      '/about': () => createElement('div', null,
+        createElement('h1', null, 'About Page'),
+        createElement('button', { onClick: () => alert('Clicked!') }, 'Click Me')
+      )
+    };
+
+    window.router = createRouter(routes, 'app');
+  </script>
+</body>
+</html>
