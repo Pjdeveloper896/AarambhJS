@@ -56,7 +56,7 @@ function ButtonComponent() {
 
 document.getElementById('root').appendChild(render(ButtonComponent()));
 
-
+```
 
 ### 3. Basic Routing
 
