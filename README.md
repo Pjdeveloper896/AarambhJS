@@ -1,43 +1,44 @@
 
-# SnapUI
+# AarambhJS  
+### *"From Hello World to Real Apps – Effortlessly."*
 
-**SnapUI** is a beginner-friendly JavaScript UI framework that supports Virtual DOM rendering, JSX-like syntax, and simple client-side routing — all in one lightweight script.
-
----
-
-## Features
-
-- **Virtual DOM Rendering**
-- **JSX-like `createElement` Syntax**
-- **Component-Based UI**
-- **Client-Side Routing**
-- **Zero Dependencies**
-- **CDN-Ready for Browser Use**
+**AarambhJS** is a beginner-friendly JavaScript UI framework that supports Virtual DOM rendering, JSX-like syntax, and simple client-side routing — all in one lightweight script.
 
 ---
 
-## Getting Started
+## ✨ Features
+
+- ⚛️ Virtual DOM Rendering  
+- 🔧 JSX-like `createElement` Syntax  
+- 🧩 Component-Based UI  
+- 🚦 Client-Side Routing  
+- 📦 Zero Dependencies  
+- 🌐 CDN-Ready for Browser Use  
+
+---
+
+## 🚀 Getting Started
 
 ### Include via CDN
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/pjdeveloper896/SnapUi/dist/Index.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/pjdeveloper896/AarambhJS/dist/Index.js"></script>
 ````
 
-Access core functions from the global `SnapUI` object:
+### Access Core Functions
 
 ```js
-const { createElement, render, updateElement, createRouter } = SnapUI;
+const { createElement, render, updateElement, createRouter } = AarambhJS;
 ```
 
 ---
 
-## Example Usage
+## 🧪 Example Usage
 
 ### 1. Rendering a Simple Element
 
 ```js
-const title = createElement('h1', { id: 'main' }, 'Hello from SnapUI!');
+const title = createElement('h1', { id: 'main' }, 'Hello from AarambhJS!');
 document.body.appendChild(render(title));
 ```
 
@@ -55,15 +56,16 @@ function ButtonComponent() {
 }
 
 document.getElementById('root').appendChild(render(ButtonComponent()));
-
 ```
+
+---
 
 ### 3. Basic Routing
 
 ```js
 const routes = {
   '/': () => createElement('div', null, 'Welcome to Home Page'),
-  '/about': () => createElement('div', null, 'About SnapUI'),
+  '/about': () => createElement('div', null, 'About AarambhJS'),
 };
 
 const router = createRouter(routes, 'root');
@@ -73,7 +75,7 @@ const router = createRouter(routes, 'root');
 
 ---
 
-## Live Example
+## 🔗 Live Example
 
 ```html
 <body>
@@ -83,9 +85,9 @@ const router = createRouter(routes, 'root');
   </nav>
   <div id="root"></div>
 
-  <script src="https://cdn.jsdelivr.net/gh/pjdeveloper896/SnapUi/dist/Index.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/pjdeveloper896/AarambhJS/dist/Index.js"></script>
   <script>
-    const { createElement, createRouter } = SnapUI;
+    const { createElement, createRouter } = AarambhJS;
 
     const routes = {
       '/': () => createElement('h2', null, 'Home Page'),
@@ -99,8 +101,11 @@ const router = createRouter(routes, 'root');
 
 ---
 
-## Credits
+## ❤️ Credits
 
-Built with love using plain JavaScript to help beginners understand how frontend frameworks work under the hood.
+Built with love using plain JavaScript
+to help beginners understand how frontend frameworks work under the hood.
 
-```
+---
+
+> Aarambh (आरंभ) means “beginning” in Sanskrit — a perfect name for developers starting their journey.
