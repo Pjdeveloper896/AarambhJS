@@ -1,6 +1,18 @@
-(function(global) {
+(function(global, factory) {
+  if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+    // CommonJS (Node, not needed here but good to keep)
+    module.exports = factory();
+  } else if (typeof define === 'function' && define.amd) {
+    // AMD
+    define([], factory);
+  } else {
+    // Global (CDN/Browser)
+    const exports = factory();
+    global.SnapUI = exports.SnapUI;
+    global.SnapAnimate = exports.SnapAnimate;
+  }
+})(typeof window !== 'undefined' ? window : this, function() {
   // === SnapUI Core ===
-
   function createElement(type, props = {}, ...children) {
     return { type, props, children: children.flat() };
   }
@@ -77,8 +89,7 @@
     return { navigate, renderRoute };
   }
 
-  // === SnapAnimate Module ===
-
+  // === SnapAnimate ===
   function animate({ from, to, duration = 1000, easing = 'linear', onUpdate, onComplete }) {
     const start = performance.now();
 
@@ -138,18 +149,29 @@
     runNext();
   }
 
-  // === Exporting All APIs ===
-
-  global.SnapUI = {
-    createElement,
-    render,
-    updateElement,
-    createRouter
+  // Return both APIs for all module systems
+  return {
+    SnapUI: {
+      createElement,
+      render,
+      updateElement,
+      createRouter
+    },
+    SnapAnimate: {
+      animate,
+      keyframes
+    }
   };
+});
+export const SnapUI = {
+  createElement,
+  render,
+  updateElement,
+  createRouter
+};
 
-  global.SnapAnimate = {
-    animate,
-    keyframes
-  };
+export const SnapAnimate = {
+  animate,
+  keyframes
+};
 
-})(window);
