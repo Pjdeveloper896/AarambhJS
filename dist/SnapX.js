@@ -52,6 +52,7 @@ function resolveDispatcher() {
   return HookDispatcher;
 }
 
+// Named ES exports
 export function spaceState(initialState) {
   return resolveDispatcher().useState(initialState);
 }
@@ -63,3 +64,6 @@ export function spaceEffect(effect, deps) {
 export function setRenderFunction(renderFn) {
   HookDispatcher.renderFn = renderFn;
 }
+
+// Optional default export for the full dispatcher (for advanced usage)
+export default HookDispatcher;
