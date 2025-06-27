@@ -1,6 +1,6 @@
 {
-  "name": "snapui",
-  "version": "1.0.0",
+  "name": "aarambhjs",
+  "version": "1.5.0",
   "description": "A lightweight reactive UI library with a virtual DOM and hooks (no JSX, no build tools).",
   "main": "dist/Index.js",
   "type": "module",
